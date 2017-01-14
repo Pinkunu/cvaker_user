@@ -1,0 +1,44 @@
+<table class="table table-responsive table-striped">
+    <tr>
+        <th>Level</th>
+        <th>Specialization</th>
+        <th>Institute</th>
+        <th>Start Year</th>
+        <th>End Year</th>
+        <th>Score (%)</th>
+        <th>
+            <button class="btn btn-sm btn-info" ng-click="addEducationFields()" type="button"><i class="fa fa-plus"></i></button>
+        </th>
+    </tr>
+    <tr ng-repeat="item in detials">
+        <td>
+            <select ng-model="item.level" class="form-control">
+                <option value="10">10th</option>
+                <option value="12">12th</option>
+                <option value="d">Diploma</option>
+                <option value="g">Graduation</option>
+                <option value="pg">Post Graduation</option>
+                <option value="pdh">Ph.d</option>
+            </select>
+        </td>
+        <td>
+            <input type="text" class="form-control">
+        </td>
+        <td>
+            <input type="text" class="form-control">
+        </td>
+
+        <td>
+            <input type="number" class="form-control">
+        </td>
+        <td>
+            <input type="number" class="form-control">
+        </td>
+        <td>
+            <input type="number" class="form-control">
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+</table>

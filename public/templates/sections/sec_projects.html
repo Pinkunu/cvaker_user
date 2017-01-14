@@ -1,0 +1,56 @@
+<div>
+    <button class="btn btn-sm btn-info" ng-click="addProjectFields()" type="button"><i class="fa fa-plus"></i></button>
+</div>
+<div ng-repeat="items in detials">
+
+    <div class="form-group">
+        <label class="control-label col-sm-4">Name:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control"  ng-model="items.name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-4">Customer:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" ng-model="items.customer">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4">Duration:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" ng-model="items.duration">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4">Team Size:</label>
+        <div class="col-sm-4">
+            <input type="number" class="form-control"  ng-model="items.team_size">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-4">Technology:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" ng-model="items.technology">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4">Description:</label>
+        <div class="col-sm-4">
+            <textarea class="form-control" rows="5" id="comment" ng-model="items.description" required></textarea> 
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4">Role:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" ng-model="items.role">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,40 @@
+<div class="container-fluid">    
+    <form class="form-horizontal">
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Section<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" ng-click="addSection(k, v)" ng-repeat="(k,v) in available">{{k}}</a></li>
+            </ul>
+        </div>
+        <button ng-click="SaveData()" class="btn btn-info">Lets Save</button>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="panel panel-default" ng-repeat="(name,detials) in profile">
+                    <div class="panel-heading text-uppercase">{{name}}</div>
+                    <div class="panel-body">
+                        <div ng-include="'templates/sections/sec_basic.html'" ng-if="name == 'basic'"></div>
+                        <div ng-include="'templates/sections/sec_education.html'" ng-if="name == 'education'"></div>
+                        <div ng-include="'templates/sections/sec_skill.html'" ng-if="name == 'skill'"></div>
+                        <div ng-include="'templates/sections/sec_passport.html'" ng-if="name == 'passport'"></div>
+                        <div ng-include="'templates/sections/sec_workexperience.html'" ng-if="name == 'workexperience'"></div>
+                        <div ng-include="'templates/sections/sec_projects.html'" ng-if="name == 'projects'"></div>
+                        <div ng-include="'templates/sections/sec_family.html'" ng-if="name == 'family'"></div>
+                        <div ng-include="'templates/sections/sec_achievements.html'" ng-if="name == 'achievements'"></div>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-sm-2 ">
+                <div class="thumbnail">
+                    <img id="image" src="../images/profile-img.jpg" alt="Cinque Terre" width="150" height="150">
+                    <label>{{profile.basic.name}}</label>
+                    <a href="" ng-click="onSelect(changePicture); return false">Change Picture</a>
+                    <input accept="image/*" type="file" id="upload" name="upload" onchange="urlSelect(input);" style="visibility: hidden;" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div> 
+
